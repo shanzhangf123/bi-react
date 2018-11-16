@@ -1,0 +1,50 @@
+.ant-layout {
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    /* border: 1px solid red; */
+    float: left;
+}
+
+.da-header {
+    /* background: #7078f7 !important; */
+    padding: 0 !important;
+}
+
+.da-menu {
+    float: left;
+}
+
+.logo-png {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.logo .user-info {
+    float: left;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.logo .ant-dropdown-link {
+    cursor: pointer;
+}
+
+/* .user-drop{
+    width: 150px !important;
+} */
+
+/* .ant-layout-header{
+    padding: 0 !important;
+} */
+
+.ant-dropdown-link{
+    width: 100px;
+}
