@@ -2,22 +2,29 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import http from './../../utils/ajax';
 import apiName from './../../config/api-name';
-import { Layout, Menu, Dropdown } from 'antd';
+// import { Layout, Menu, Dropdown } from 'antd';
 import './chat.css'
 
-const { Header, Sider, Content } = Layout;
+// const { Header, Sider, Content } = Layout;
 
 class Chat extends Component {
+
+    constructor(props) {
+        super(props)
+        // this.fetchGroupInfo();
+    }
 
 
     state = {
         currentId: '',
         currentForm: '',
+        memberList: []
     };
 
 
-    componentWillUpdate(nextProps) {
+    componentWillReceiveProps(nextProps) {
         if (nextProps.location.search) {
+            console.log(88888)
             this.getCurrentId(nextProps.location.search);
         }
     }
@@ -51,6 +58,7 @@ class Chat extends Component {
         }, (res) => {
             if (res.status === 1) {
                 console.log('获取群组消息成功')
+                this.setState({ memberList: res.data.info });
             } else {
                 console.error('登录失败')
             }
@@ -70,23 +78,25 @@ class Chat extends Component {
 
     render() {
         return (
-            // <Layout>
-            //     <Header className="chat-header">
-            //         聊天头部
-            //     </Header>
-            //     <div>111</div>
-            // </Layout>
             <div>
                 <div className="chat-header">
-                    聊天头部
+                    <span className="chat-name"></span>
+                    <span className="chat-topic"></span>
                 </div>
                 <div className="chat-content">
 
-
                 </div>
                 <div className="chat-right">
-
-
+                    <span>基本信息</span>
+                    <ul>
+                        {
+                            this.state.memberList.map((item, index) => {
+                                return (
+                                    <div key={index}>{item.work_name}</div>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
             </div>
         )

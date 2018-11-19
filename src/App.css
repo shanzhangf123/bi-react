@@ -1,4 +1,6 @@
 @import '~antd/dist/antd.css';
+@import './../src/assets/css/ant-rest.css';
+
 .App {
     text-align: center;
 }
