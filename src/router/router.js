@@ -16,6 +16,8 @@ const BasicRoute = () => (
             <Route exact path="/dashboard" component={App} />
             <Route exact path="/chat" component={App} />
             <Route exact path="/folder" component={App} />
+            <Route exact path="/project" component={App} />
+            <Route exact path="/attention" component={App} />
         </Switch>
     </HashRouter>
 );

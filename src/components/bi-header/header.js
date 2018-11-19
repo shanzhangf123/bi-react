@@ -61,13 +61,17 @@ class BiHeader extends Component {
                     style={{ lineHeight: '64px' }}
                 >
                     <Menu.Item key="1">
-                        首页
+                        <NavLink exact to='/dashboard' className="blue">首页</NavLink>
                     </Menu.Item>
                     <Menu.Item key="2">
                         <NavLink exact to='/folder' className="blue">文件夹</NavLink>
                     </Menu.Item>
-                    <Menu.Item key="3">关注信息</Menu.Item>
-                    <Menu.Item key="4">项目</Menu.Item>
+                    <Menu.Item key="3">
+                        <NavLink exact to='/attention' className="blue">关注信息</NavLink>
+                    </Menu.Item>
+                    <Menu.Item key="4">
+                        <NavLink exact to='/project' className="blue">项目</NavLink>
+                    </Menu.Item>
                     <Menu.Item key="5">
                         <NavLink exact to='/chat' className="blue">聊天</NavLink>
                     </Menu.Item>

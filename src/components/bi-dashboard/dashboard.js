@@ -6,6 +6,8 @@ import BiHeader from './../bi-header/header';
 import './dashboard.css';
 import Chat from './../bi-chat/chat';
 import Folder from './../bi-folder/folder';
+import Attention from './../bi-attention/attention';
+import Project from './../bi-project/project';
 
 const { Content } = Layout;
 
@@ -30,9 +32,11 @@ class Dashboard extends Component {
                 <Layout>
                     <LeftSide />
                     <Content>
-                        <div onClick={this.handleClick}>test</div>
+                        {/* <div onClick={this.handleClick}>test</div> */}
                         <Route path="/folder" component={Folder} />
                         <Route path="/chat" component={(Chat)} />
+                        <Route path="/project" component={(Project)} />
+                        <Route path="/attention" component={(Attention)} />
                     </Content>
                 </Layout>
             </Layout>

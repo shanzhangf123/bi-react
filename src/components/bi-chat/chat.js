@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-// import { Layout } from 'antd';
-// import LeftSide from './../bi-left-side/left-side';
-// import BiHeader from './../bi-header/header';
-// const { Content } = Layout;
 import http from './../../utils/ajax';
 import apiName from './../../config/api-name';
+import { Layout, Menu, Dropdown } from 'antd';
+import './chat.css'
+
+const { Header, Sider, Content } = Layout;
 
 class Chat extends Component {
 
@@ -15,10 +15,6 @@ class Chat extends Component {
         currentForm: '',
     };
 
-    // constructor(props) {
-    //     super(props)
-    //     // console.log('事实上', this.props);
-    // }
 
     componentWillUpdate(nextProps) {
         if (nextProps.location.search) {
@@ -74,7 +70,25 @@ class Chat extends Component {
 
     render() {
         return (
-            <div>这是聊天</div>
+            // <Layout>
+            //     <Header className="chat-header">
+            //         聊天头部
+            //     </Header>
+            //     <div>111</div>
+            // </Layout>
+            <div>
+                <div className="chat-header">
+                    聊天头部
+                </div>
+                <div className="chat-content">
+
+
+                </div>
+                <div className="chat-right">
+
+
+                </div>
+            </div>
         )
     }
 }

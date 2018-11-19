@@ -1,0 +1,16 @@
+.chat-header {
+    /* width: 200px; */
+    /* height: ; */
+    background: #fff;
+    /* width: calc(100vw - 250px); */
+    /* margin-left: 250px; */
+    width: 1000%;
+    height: 70px;
+    position: absolute;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 1px rgba(255, 255, 255, 0.3), 0 0 1px rgba(255, 255, 255, 0.3), 0 0 1px rgba(66, 66, 66, 0.3);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 1px rgba(255, 255, 255, 0.3), 0 0 1px rgba(255, 255, 255, 0.3), 0 0 1px rgba(66, 66, 66, 0.3);
+}
+
+.chat-content {
+    width: 100px;
+}
