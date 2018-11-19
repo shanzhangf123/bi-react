@@ -5,4 +5,6 @@ export default {
     contactList: 'contact/display',
     chatList: 'chat/get-group-list',
     fetchGroupInfo: 'chat/fetch-group-info',
+    getGroupMsg: 'chat/get-group-msg',
+
 }

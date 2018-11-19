@@ -13,7 +13,7 @@ export default {
      * 根据key 获取
      */
     getLocalstorage(key) {
-        return  localStorage.getItem(key);
+        return localStorage.getItem(key);
     },
 
     removeLocalStorage(key) {
@@ -33,7 +33,8 @@ export default {
      * 根据key 获取
      */
     getSessionstorage(key) {
-       return sessionStorage.getItem(key); 
+        // console.log('sessionStorage.getItem(key)', sessionStorage.getItem(key));
+        return sessionStorage.getItem(key);
     },
 
     removeSessionStorage(key) {

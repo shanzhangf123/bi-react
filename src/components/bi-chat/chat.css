@@ -17,6 +17,27 @@
     /* height: 300px; */
     /* border-left: 1px solid rgba(145, 147, 171, 0.2); */
     float: left;
+    overflow: auto;
+}
+
+.chat-content .warp {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: left;
+    /* text-indent: 30px; */
+    padding-left: 30px;
+    /* margin-left: 10px; */
+}
+
+.chat-content .warp.is-self {
+    text-align: right;
+    /* margin-right: 10px; */
+    text-indent: 30px;
+    padding-right: 30px;
+    color: red;
+    /* margin-left: 0 !important; */
 }
 
 .chat-right {

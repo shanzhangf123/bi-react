@@ -19,7 +19,7 @@ export default {
             url: url,
             withCredentials: true
         }).then((res) => {
-            console.log('GET......', res);
+            // console.log('GET......', res);
             if (callback) {
                 callback(res.data)
             }
@@ -56,7 +56,7 @@ export default {
             url: URL + url,
             data: sendData,
         }).then((res) => {
-            console.log('Post......', res);
+            // console.log('Post......', res);
             if (callback) {
                 callback(res.data)
             }
