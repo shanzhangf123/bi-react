@@ -48,7 +48,7 @@ export default {
             }
         }
         if (storage.getSessionstorage(storageConfig.SESSION_ID)) {
-            sendData.append('session_id', JSON.parse(storage.getSessionstorage(storageConfig.SESSION_ID)));
+            sendData.append('session_id', storage.getSessionstorage(storageConfig.SESSION_ID));
         }
         axios({
             method: "POST",

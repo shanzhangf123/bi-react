@@ -74,7 +74,7 @@ class LeftSide extends Component {
 
     //页面渲染完成
     componentDidMount() {
-        console.log('页面渲染结束');
+        // console.log('页面渲染结束');
     }
 
 
