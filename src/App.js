@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 import './App.css';
 // import Homepage from './components/bi-homepage/homepage'
 import Dashboard from './components/bi-dashboard/dashboard';
-import storageConfig from './config/storage-name';
-import storage from './utils/storage';
-import wsConfig from './config/ws-name.config';
+// import storageConfig from './config/storage-name';
+// import storage from './utils/storage';
+// import wsConfig from './config/ws-name.config';
 import * as ws from './utils/websocket';
 //
 // import * as ws from './utils/websocket';

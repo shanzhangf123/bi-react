@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
-// import { withRouter } from 'react-router-dom';
-// import http from './../../../utils/ajax';
-// import apiName from './../../../config/api-name';
-// import storage from './../../../utils/storage';
-// import storageConfig from '../../../config/storage-name';
 
 export default class ChatContent extends Component {
-  // constructor(props) {
-  //     super(props);
-  //     // console.log("props", props);
+  constructor (props) {
+    super (props);
+    console.log ('');
+  }
+
+  // outputData () {
+  //   // this.props.callback ('3333', '######');
   // }
 
   render () {
@@ -21,11 +20,14 @@ export default class ChatContent extends Component {
             </div>
           );
         })}
+        <div
+          onClick={() => {
+            this.props.callback (...['a', 'n', 'c']);
+          }}
+        >
+          test
+        </div>
       </div>
     );
   }
-
-  //   componentWillReceiveProps (nextProps) {
-  //     // console.log ('props', nextProps);
-  //   }
 }

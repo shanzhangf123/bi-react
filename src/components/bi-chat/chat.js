@@ -13,6 +13,12 @@ import wsConfig from './../../config/ws-name.config';
 class Chat extends Component {
   //   subscription;
 
+  //getChildData
+
+  getChildData (e, t, n) {
+    console.log ('getChildData', e, t, n);
+  }
+
   constructor (props) {
     super (props);
     this.state.subscription = notification
@@ -85,11 +91,11 @@ class Chat extends Component {
       let companyInfo = storage.getSessionstorage (storageConfig.COMPANY_INFO);
       //   let form = storage.getSessionstorage (storageConfig.SESSION_ID);
       //   console.log ('message.data.gid', message.data.gid, this.state.currentId);
-      if (message.data.gid == this.state.currentId) {
+      if (message.data.gid === this.state.currentId) {
         // console.log (88888);
-        if (message.data.sent && message.data.sent == 1) {
+        if (message.data.sent && message.data.sent === 1) {
           //   console.log (9999);
-          message.data.owner = this.state.currentForm == 1
+          message.data.owner = this.state.currentForm === 1
             ? userInfo.uuid
             : companyInfo[0].psid;
           message.data.isSelf = true;
@@ -247,8 +253,9 @@ class Chat extends Component {
     let text = '';
     const possible =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (let i = 0; i < 7; i++)
+    for (let i = 0; i < 7; i++) {
       text += possible.charAt (Math.floor (Math.random () * possible.length));
+    }
     return text;
   }
 

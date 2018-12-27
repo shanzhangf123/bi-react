@@ -12,7 +12,10 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-websocket": "^2.0.0",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "webpack": "^4.19.1",
+    "webpack-dev-server": "^3.1.9",
+    "yarn": "^1.12.3"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Layout, Menu, Dropdown} from 'antd';
 import {NavLink} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
+import storage from './../../utils/storage';
+import storageConfig from '../../config/storage-name';
 import './header.css';
 
 const {Header} = Layout;
@@ -12,7 +14,9 @@ class BiHeader extends Component {
   state = {
     theme: 'dark',
     current: '1',
+    userInfo: {},
   };
+
 
   handleSelect = e => {
     this.setState ({
@@ -25,6 +29,15 @@ class BiHeader extends Component {
     console.log ('退出登录');
     this.props.history.push ('login');
   };
+
+  //获取当前用户信息
+  componentDidMount () {
+    let userInfo = storage.getSessionstorage (storageConfig.USER_DATA);
+    console.log ('获取当前用户信息', this.state.userInfo);
+    this.setState ({
+      userInfo: userInfo,
+    });
+  }
 
   render () {
     const menu = (
@@ -57,7 +70,7 @@ class BiHeader extends Component {
           <div className="user-info">
             <Dropdown overlay={menu} trigger={['click']}>
               <span className="ant-dropdown-link" href="#">
-                Allen shan
+                {this.state.userInfo.work_name}
               </span>
             </Dropdown>
           </div>
